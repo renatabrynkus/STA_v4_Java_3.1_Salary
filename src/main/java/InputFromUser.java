@@ -5,14 +5,19 @@ public class InputFromUser {
     int startMenu() {
         Scanner scanner = new Scanner(System.in);
 
+        System.out.println(menuText());
         while (!scanner.hasNextInt()) {
             scanner.next();
-            System.out.println("1 - Print sum of all employees' salary.\n2 - Display all employees data.\n" +
-                    "3 - Add a new employee.\n4 - End program");
+            System.out.println(menuText());
         }
         int actionPointFromUser = scanner.nextInt();
 
         return actionPointFromUser;
+    }
+
+    private String menuText() {
+        return "1 - Print sum of all employees' salary.\n2 - Display all employees data.\n" +
+                "3 - Add a new employee.\n4 - End program";
     }
 
     Employee employeeInputFromUser() {
