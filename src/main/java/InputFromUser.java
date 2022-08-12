@@ -28,7 +28,7 @@ public class InputFromUser {
         System.out.println("Enter employee's salary");
         while (!scanner.hasNextDouble()) {
             scanner.next();
-            System.out.println("Please enter ");
+            System.out.println("Please enter a valid number");
         }
         double employeeSalary = scanner.nextDouble();
 
