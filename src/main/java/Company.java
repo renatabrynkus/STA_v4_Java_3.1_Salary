@@ -8,10 +8,6 @@ public class Company {
         employeesList.add(employee);
     }
 
-    public void setList(ArrayList<Employee> employeesList) {
-        this.employeesList = employeesList;
-    }
-
     public ArrayList<Employee> getList() {
         return employeesList;
     }
