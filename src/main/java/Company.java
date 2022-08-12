@@ -8,7 +8,7 @@ public class Company {
         employeesList.add(employee);
     }
 
-    public ArrayList<Employee> getList() {
+    public ArrayList<Employee> getEmployeesList() {
         return employeesList;
     }
 }

@@ -2,7 +2,7 @@ import java.util.Locale;
 import java.util.Scanner;
 
 public class InputFromUser {
-    int startMenu() {
+    public int startMenu() {
         Scanner scanner = new Scanner(System.in);
 
         System.out.println(menuText());
@@ -20,7 +20,7 @@ public class InputFromUser {
                 "3 - Add a new employee.\n4 - End program";
     }
 
-    Employee employeeInputFromUser() {
+    public Employee employeeInputFromUser() {
 
         Scanner scanner = new Scanner(System.in);
         scanner.useLocale(Locale.ENGLISH);

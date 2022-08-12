@@ -36,7 +36,7 @@ public class Employee {
         this.employeeSalary = employeeSalary;
     }
 
-    public static double addSalaries(ArrayList<Employee> employeesList) {
+    public static double addAllSalaries(ArrayList<Employee> employeesList) {
         double salarySum = 0;
         for (Employee employee : employeesList
         ) {

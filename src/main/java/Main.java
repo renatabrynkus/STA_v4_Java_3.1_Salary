@@ -7,7 +7,7 @@ public class Main {
         Company company = new Company();
         InputFromUser inputFromUser = new InputFromUser();
 
-        ArrayList<Employee> employeesList = company.getList();
+        ArrayList<Employee> employeesList = company.getEmployeesList();
 
         for (int i = 0; i < 5; i++) {
             Employee newEmployee = inputFromUser.employeeInputFromUser();
@@ -19,7 +19,7 @@ public class Main {
         while (actionPointFromUser != 4) {
             switch (actionPointFromUser) {
                 case 1: {
-                    System.out.println(Employee.addSalaries(employeesList));
+                    System.out.println(Employee.addAllSalaries(employeesList));
                     break;
                 }
                 case 2: {
