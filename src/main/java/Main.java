@@ -33,13 +33,15 @@ public class Main {
                     company.addToEmployeesList(inputFromUser.employeeInputFromUser());
                     break;
                 }
-                case 4: {
-                    System.exit(0);
+                default: {
+                    System.out.println("Please enter an integer from 1 to 4");
                 }
-                default:
-                    System.out.println("Sorry, the input was not valid.");
             }
             actionPointFromUser = inputFromUser.startMenu();
         }
+        System.exit(0);
+
+        System.out.println("The value you've entered is not correct. Please try again.");
+        inputFromUser.startMenu();
     }
 }
