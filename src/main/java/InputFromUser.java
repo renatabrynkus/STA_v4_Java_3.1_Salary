@@ -2,7 +2,7 @@ import java.util.Locale;
 import java.util.Scanner;
 
 public class InputFromUser {
-    public int startMenu() {
+    static int startMenu() {
         Scanner scanner = new Scanner(System.in);
 
         System.out.println(menuText());
@@ -15,12 +15,16 @@ public class InputFromUser {
         return actionPointFromUser;
     }
 
-    private String menuText() {
-        return "1 - Print sum of all employees' salary.\n2 - Display all employees data.\n" +
-                "3 - Add a new employee.\n4 - End program";
+    private static String menuText() {
+        return """
+                Please choose an action:
+                1 - Print sum of all employees' salary.
+                2 - Display all employees data.
+                3 - Add a new employee.
+                4 - End the program""";
     }
 
-    public Employee employeeInputFromUser() {
+    public static Employee employeeInputFromUser() {
 
         Scanner scanner = new Scanner(System.in);
         scanner.useLocale(Locale.ENGLISH);

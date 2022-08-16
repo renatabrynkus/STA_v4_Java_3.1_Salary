@@ -45,6 +45,14 @@ public class Employee {
         return salarySum;
     }
 
+    public static void printEmployeeData(ArrayList<Employee> employeesList) {
+        for (Employee employee : employeesList
+        ) {
+            System.out.println(employee.toString());
+
+        }
+    }
+
     @Override
     public String toString() {
         return "Salary for " + employeeFirstName + " " + employeeLastName + " is " + employeeSalary;
@@ -52,3 +60,4 @@ public class Employee {
 
 
 }
+
