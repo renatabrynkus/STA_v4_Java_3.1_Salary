@@ -1,15 +1,18 @@
 import java.util.Locale;
 import java.util.Scanner;
 
-public class InputFromUser {
+public class UserInputHandler {
+
     static int startMenu() {
         Scanner scanner = new Scanner(System.in);
 
         System.out.println(menuText());
+        //jako metoda prywatna
         while (!scanner.hasNextInt()) {
             scanner.next();
             System.out.println(menuText());
         }
+
         int actionPointFromUser = scanner.nextInt();
 
         return actionPointFromUser;
@@ -24,7 +27,7 @@ public class InputFromUser {
                 4 - End the program""";
     }
 
-    public static Employee employeeInputFromUser() {
+    public static Employee getEmployeeFromUser() {
 
         Scanner scanner = new Scanner(System.in);
         scanner.useLocale(Locale.ENGLISH);

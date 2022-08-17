@@ -1,32 +1,23 @@
-import java.util.ArrayList;
-
 public class Main {
 
     public static void main(String[] args) {
 
         Company company = new Company();
 
-        ArrayList<Employee> employeesList = company.getEmployeesList();
-
         for (int i = 0; i < 5; i++) {
-            Employee newEmployee = InputFromUser.employeeInputFromUser();
-            company.addToEmployeesList(newEmployee);
+            company.addEmployee(UserInputHandler.getEmployeeFromUser());
         }
+        int selectedOption = UserInputHandler.startMenu();
 
-        int actionPointFromUser = InputFromUser.startMenu();
-
-        while (actionPointFromUser != 4) {
-            switch (actionPointFromUser) {
-                case 1 -> System.out.println(Employee.addAllSalaries(employeesList));
-                case 2 -> Employee.printEmployeeData(employeesList);
-                case 3 -> company.addToEmployeesList(InputFromUser.employeeInputFromUser());
+        while (selectedOption != 4) {
+            switch (selectedOption) {
+                case 1 -> System.out.println(company.getSumOfSalaries());
+                case 2 -> company.printEmployeeData();
+                case 3 -> company.addEmployee(UserInputHandler.getEmployeeFromUser());
                 default -> System.out.println("Please enter an integer from 1 to 4");
             }
-            actionPointFromUser = InputFromUser.startMenu();
+            selectedOption = UserInputHandler.startMenu();
         }
         System.exit(0);
-
-        System.out.println("The value you've entered is not correct. Please try again.");
-        InputFromUser.startMenu();
     }
 }
