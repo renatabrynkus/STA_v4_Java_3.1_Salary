@@ -7,7 +7,6 @@ public class UserInputHandler {
         Scanner scanner = new Scanner(System.in);
 
         System.out.println(menuText());
-        //jako metoda prywatna
         while (!scanner.hasNextInt()) {
             scanner.next();
             System.out.println(menuText());
