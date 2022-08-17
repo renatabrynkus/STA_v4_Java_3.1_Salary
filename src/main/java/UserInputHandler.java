@@ -7,14 +7,25 @@ public class UserInputHandler {
         Scanner scanner = new Scanner(System.in);
 
         System.out.println(menuText());
-        while (!scanner.hasNextInt()) {
-            scanner.next();
-            System.out.println(menuText());
-        }
+        isInputNotInt(scanner);
 
         int actionPointFromUser = scanner.nextInt();
 
         return actionPointFromUser;
+    }
+
+    private static void isInputNotInt(Scanner scanner) {
+        while (!scanner.hasNextInt()) {
+            scanner.next();
+            System.out.println(menuText());
+        }
+    }
+
+    private static void isInputNotDouble(Scanner scanner) {
+        while (!scanner.hasNextDouble()) {
+            scanner.next();
+            System.out.println("Please enter a valid number");
+        }
     }
 
     private static String menuText() {
@@ -37,10 +48,8 @@ public class UserInputHandler {
         String employeeLastName = scanner.nextLine();
 
         System.out.println("Enter employee's salary");
-        while (!scanner.hasNextDouble()) {
-            scanner.next();
-            System.out.println("Please enter a valid number");
-        }
+        isInputNotDouble(scanner);
+
         double employeeSalary = scanner.nextDouble();
 
         return new Employee(employeeFirstName, employeeLastName, employeeSalary);
