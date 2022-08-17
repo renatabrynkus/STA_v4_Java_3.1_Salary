@@ -9,9 +9,9 @@ public class UserInputHandler {
         System.out.println(menuText());
         isInputNotInt(scanner);
 
-        int actionPointFromUser = scanner.nextInt();
+        int selectedOption = scanner.nextInt();
 
-        return actionPointFromUser;
+        return selectedOption;
     }
 
     private static void isInputNotInt(Scanner scanner) {
